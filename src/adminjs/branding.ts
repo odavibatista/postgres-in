@@ -3,7 +3,7 @@
 import { BrandingOptions } from 'adminjs'
 
 export const brandingOptions: BrandingOptions = {
-    companyName: "Your Project's Name",
+    companyName: "PostgresIn",
     logo: '/postgres.png',
     favicon: '/postgres.png',
     theme: {

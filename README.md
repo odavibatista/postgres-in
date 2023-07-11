@@ -1,6 +1,3 @@
-# Sequelize Boilerplate
+# PostgresIn
 
-Boilerplate application made for developing Sequelize Databases to be run with TypeScript.
-All the dependencies you need. Bcrypt included for encrypted passwords and values! AdminJS if you want to build an interface!
-<br>
-Enjoy it!
+Database and API created with PostgreSQL inspired on LinkedIn's functionalities. Bootstrapped with my <a href="https://github.com/daviebatista/postgres-boilerplate"></a>AdminJs Boilerplate</a>

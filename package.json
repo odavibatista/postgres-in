@@ -1,8 +1,8 @@
 {
-  "name": "api-boilerplate",
+  "name": "postgres-in",
   "version": "1.0.0",
-  "description": "Boilerplate made for creating back-end applications with Postgres + Sequelize ORM + AdminJS interface. Enjoy!",
-  "main": "index.js",
+  "description": "Database and API created with PostgreSQL inspired on LinkedIn's functionalities.",
+  "main": "./src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev src/app.ts"
