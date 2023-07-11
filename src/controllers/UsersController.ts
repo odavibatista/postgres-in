@@ -19,14 +19,19 @@ export const UsersController = {
         /* Save a candidate on the database */
     /* Input route: localhost:3000/candidates */
     save: async (request: Request, response: Response) =>   {
-        const { name, bio, email, phone, openToWork } = request.body
+        const { firstName, lastName, email, phone, bio, about, birthDate, role, password, openToWork } = request.body
 
         try {
             const user = await User.create({
-                name,
-                bio,
+                firstName,
+                lastName,
                 email,
                 phone,
+                bio,
+                about,
+                birthDate,
+                role,
+                password,
                 openToWork
             })
 
@@ -55,7 +60,7 @@ export const UsersController = {
     /* Input route: localhost:3000/candidates/[id] */
     update: async (request: Request, response: Response) => {
         const { id } = request.params
-        const { name, bio, email, phone, openToWork } = request.body
+        const { firstName, lastName, email, phone, bio, about, birthDate, role, password, openToWork } = request.body
 
         try {
             const user = await User.findByPk(id)
@@ -64,10 +69,15 @@ export const UsersController = {
                 return response.status(404).json({message: 'Candidate not found! :('})
             }
 
-            user.first_name = name
-            user.bio = bio
-            user.email = email
-            user.phone = phone
+            user.firstName = firstName,
+            user.lastName = lastName,
+            user.email = email,
+            user.phone = phone,
+            user.bio = bio,
+            user.about = about,
+            user.birthDate = birthDate,
+            user.role = role,
+            user.password = password,
             user.openToWork = openToWork
 
             await user.save()

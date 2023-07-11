@@ -4,26 +4,31 @@
 module.exports = {
   //@ts-ignore -> Typing these modules will throw a syntax error on Sequelize
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('tests', {
+    await queryInterface.createTable('user_tests', {
       id: {
         type: Sequelize.INTEGER,
-        allowNull:  false,
-        autoIncrement:  true,
-        primaryKey: true
-      },
-
-      name:  {
-        type: Sequelize.STRING,
         allowNull: false,
+        primaryKey: true,
+        references: {
+          model: 'users',
+          key:  'id'
+        },
+
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
 
-      stacks: {
-        type: Sequelize.STRING,
-      },
-
-      applies:  {
+      test_id: {
         type: Sequelize.INTEGER,
-        allowNull:  false
+        allowNull: false,
+        primaryKey: true,
+        references: {
+          model: 'tests',
+          key:  'id'
+        },
+
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
 
       created_at: {
@@ -40,6 +45,7 @@ module.exports = {
 
   //@ts-ignore -> Typing these modules will throw a syntax error on Sequelize
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('tests')
+    await queryInterface.dropTable('user_tests')
+
   }
 };

@@ -3,8 +3,8 @@ import { BelongsToManyAddAssociationMixin, DataTypes, Model } from 'sequelize'
 
 export interface UserInstance extends Model    {
     id: number,
-    first_name: string,
-    last_name: string,
+    firstName: string,
+    lastName: string,
     email: string,
     phone: string,
     bio: string,

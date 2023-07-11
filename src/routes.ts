@@ -8,4 +8,12 @@ router.get('/', (request: Request, response: Response) => response.json({ ping: 
 
 /* Users routes */
                 /* Show all users */
-        router.get('/user', UsersController.index)
+        router.get('/users', UsersController.index)
+                /*Show a specific user */
+        router.get('/users/:id', UsersController.show)
+                /* Register a new user */
+        router.post('/users', UsersController.save)
+                /* Update a user's data */
+        router.put('/users/:id', UsersController.update)
+                /* Remove a user from the database */
+        router.delete('/users/:id', UsersController.delete)
