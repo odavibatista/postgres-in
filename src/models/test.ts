@@ -1,10 +1,12 @@
 import { sequelize } from '../database'
-import { BelongsToManyAddAssociationMixin, DataTypes, Model } from 'sequelize'
+import { BelongsToManyAddAssociationMixin, BelongsToManyCountAssociationsMixin, DataTypes, Model } from 'sequelize'
+import { UserInstance } from './user'
 
 export interface TestInstance extends Model    {
     id: number,
     name: string,
-    applies: number
+    addUser: BelongsToManyAddAssociationMixin<UserInstance, number>
+    applies: BelongsToManyCountAssociationsMixin
 //    addCertificate: BelongsToManyAddAssociationMixin
 }
 

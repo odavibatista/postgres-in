@@ -2,8 +2,8 @@ import { Request, Response } from "express"
 import { User } from '../models'
 
 export const UsersController = {
-            /* Show all candidates */
-    /* Input route: localhost:3000/candidates */
+            /* Show all users */
+    /* Input route: localhost:3000/users */
     index: async (request: Request, response: Response) =>  {
         try {
             const users = await User.findAll()
@@ -16,8 +16,8 @@ export const UsersController = {
 
     },
 
-        /* Save a candidate on the database */
-    /* Input route: localhost:3000/candidates */
+        /* Save a user on the database */
+    /* Input route: localhost:3000/users */
     save: async (request: Request, response: Response) =>   {
         const { firstName, lastName, email, phone, bio, about, birthDate, role, password, openToWork } = request.body
 
@@ -42,8 +42,8 @@ export const UsersController = {
             }
         }
     },
-        /* Show info of a specific candidate */
-    /* Input route: localhost:3000/candidates/[id] */
+        /* Show info of a specific user */
+    /* Input route: localhost:3000/users/[id] */
     show:   async (request: Request, response: Response) => {
         const { id } = request.params
 
@@ -56,8 +56,8 @@ export const UsersController = {
             }
         }
     },
-        /* Update a specific candidate's info */
-    /* Input route: localhost:3000/candidates/[id] */
+        /* Update a specific user's info */
+    /* Input route: localhost:3000/users/[id] */
     update: async (request: Request, response: Response) => {
         const { id } = request.params
         const { firstName, lastName, email, phone, bio, about, birthDate, role, password, openToWork } = request.body
@@ -88,8 +88,8 @@ export const UsersController = {
             }
         }
     },
-    /* Remove a specific candidate from the database*/
-    /* Input route: localhost:3000/candidates/[id] */
+    /* Remove a specific user from the database*/
+    /* Input route: localhost:3000/user/[id] */
     delete: async (request: Request, response: Response) => {
         const { id } = request.params
 
