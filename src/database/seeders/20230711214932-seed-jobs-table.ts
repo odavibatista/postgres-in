@@ -10,18 +10,22 @@ module.exports = {
       {
         title: 'Full-stack Javascript Developer',
         description: 'We are looking for a Full-Stack JavaScript developr who knows how to use React, Express, Node.Js and MongoDB (MERN STACK).',
-        limit_date: '2023-09-31',
+        limit_date: '2023-09-30',
         company_id: companies[0].id,
         created_at: new Date(),
         updated_at: new Date()
-      }, {
+      }, 
+      
+      {
         title: 'Front-end Developer (Vue.js)',
         description: 'We look for a Front-End Developer specialized in Vue.Js and build of Single-Page Applications.',
         limit_date: '2023-08-01',
         company_id: companies[0].id,
         created_at: new Date(),
         updated_at: new Date()
-      }, {
+      }, 
+      
+      {
         title: 'Back-end Developer',
         description: 'We need a Java Developer capable of building applications, and also knows how to use Kotlin for mobile applications.',
         limit_date: '2023-09-01',
@@ -29,6 +33,7 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date()
       },
+
       { 
         title: 'Python Developer', 
         description: 'We are looking for a Python Developer who can build web applications with frameworks such as Flask and Django.', 

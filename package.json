@@ -9,6 +9,7 @@
     "mg": "npx sequelize-cli migration:generate --name",
     "sg": "npx sequelize-cli seed:generate --name",
     "mi": "npx sequelize-cli db:migrate",
+    "mu": "npx sequelize-cli db:migrate:undo",
     "sd": "npx sequelize-cli db:seed:all"
   },
   "keywords": [

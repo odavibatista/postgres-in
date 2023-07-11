@@ -61,7 +61,6 @@ module.exports = {
 
       open_to_work: {
         type: Sequelize.BOOLEAN,
-        defaultValue: true
       },
 
       created_at: {

@@ -23,7 +23,7 @@ module.exports = {
 
       applies:  {
         type: Sequelize.INTEGER,
-        allowNull:  false
+        defaultValue: 0
       },
 
       created_at: {

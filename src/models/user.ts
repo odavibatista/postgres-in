@@ -54,7 +54,6 @@ export const User = sequelize.define<UserInstance>(
 
         role:   {
             type:   DataTypes.STRING,
-            defaultValue:   'user'
         },
 
         password:   {
