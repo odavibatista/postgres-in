@@ -39,7 +39,17 @@ export const locale: Locale = {
             createdAt: 'Criado em',
             updatedAt: 'Atualizado em',
             from: 'De',
-            to: 'Até'
+            to: 'Até',
+            first_name: 'Nome',
+            last_name: 'Sobrenome',
+            bio: 'Sobre',
+            email: 'Email',
+            birth_date: 'Data de nascimento',
+            password: 'Senha',
+            role: '',
+            roles: 'Cargos',
+            education: 'Educação',
+            open_to_work: 'Aceita trabalho'
         },
         messages: {
             successfullyBulkDeleted: '{{count}} registro removido com sucesso',

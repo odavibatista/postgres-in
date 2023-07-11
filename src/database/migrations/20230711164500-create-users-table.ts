@@ -28,7 +28,18 @@ module.exports = {
         unique: true
       },
 
+      phone:  {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
+      },
+
       bio:  {
+        type: Sequelize.TEXT,
+        allowNull: true
+      },
+
+      about:  {
         type: Sequelize.TEXT,
         allowNull: true
       },
@@ -46,6 +57,11 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+
+      open_to_work: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
 
       created_at: {

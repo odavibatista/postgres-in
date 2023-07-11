@@ -5,7 +5,11 @@
   "main": "./src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev src/app.ts"
+    "dev": "ts-node-dev src/app.ts",
+    "mg": "npx sequelize-cli migration:generate --name",
+    "sg": "npx sequelize-cli seed:generate --name",
+    "mi": "npx sequelize-cli db:migrate",
+    "sd": "npx sequelize-cli db:seed:all"
   },
   "keywords": [
     "sequelize",
