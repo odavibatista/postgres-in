@@ -19,7 +19,7 @@ export const UsersController = {
         /* Save a user on the database */
     /* Input route: localhost:3000/users */
     save: async (request: Request, response: Response) =>   {
-        const { firstName, lastName, email, phone, bio, about, birthDate, role, password, openToWork } = request.body
+        const { firstName, lastName, email, phone, bio, about, birthDate, role, password, openToWork, worksAt } = request.body
 
         try {
             const user = await User.create({
@@ -32,7 +32,8 @@ export const UsersController = {
                 birthDate,
                 role,
                 password,
-                openToWork
+                openToWork,
+                worksAt
             })
 
             return response.status(201).json(user)

@@ -25,7 +25,8 @@ module.exports = {
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false
-      }
+      },
+
     })
   },
   //@ts-ignore -> Typing these modules will throw a syntax error on Sequelize

@@ -12,7 +12,8 @@ export interface UserInstance extends Model    {
     birthDate: Date,
     role: string,
     password: string,
-    openToWork: boolean
+    openToWork: boolean,
+    worksAt: number
 //    addCertificate: BelongsToManyAddAssociationMixin
 }
 
@@ -64,7 +65,18 @@ export const User = sequelize.define<UserInstance>(
         openToWork: {
             type:   DataTypes.BOOLEAN,
             defaultValue:   true
-        }
+        },
+
+        works_at: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'companies',
+                key: 'id',
+            },
+            onUpdate:   'CASCADE',
+            onDelete: 'RESTRICT'
+        },
 
     }
 )

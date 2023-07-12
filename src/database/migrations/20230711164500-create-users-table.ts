@@ -63,6 +63,17 @@ module.exports = {
         type: Sequelize.BOOLEAN,
       },
 
+      works_at: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'companies',
+          key: 'id',
+          onUpdate: 'CASCADE',
+          onDelete: 'RESTRICT'
+        },
+      },
+
       created_at: {
         allowNull: false,
         type: Sequelize.DATE

@@ -15,6 +15,9 @@ User.belongsToMany(Job, {
     through: 'job_users'
 })
 
+Company.hasMany(User)
+User.belongsTo(Company)
+
 Company.hasMany(Job)
 
 Job.belongsTo(Company)
