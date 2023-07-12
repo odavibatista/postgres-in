@@ -4,16 +4,20 @@
   "description": "Database and API created with PostgreSQL inspired on LinkedIn's functionalities.",
   "main": "./src/app.ts",
   "scripts": {
+    "cdb": "sequelize-cli db:create",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev src/app.ts",
     "mg": "npx sequelize-cli migration:generate --name",
     "sg": "npx sequelize-cli seed:generate --name",
     "mi": "npx sequelize-cli db:migrate",
     "mu": "npx sequelize-cli db:migrate:undo",
-    "sd": "npx sequelize-cli db:seed:all"
+    "sd": "npx sequelize-cli db:seed:all",
+    "create": "npm run cdb && npm run mi && npm run sd && npm run dev"
   },
   "keywords": [
     "sequelize",
+    "postgres",
+    "api",
     "typescript",
     "express"
   ],
